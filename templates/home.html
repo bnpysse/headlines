@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headlines</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="publication" placeholder="search"/>
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Headlines</h1>
+    {% for article in articles %}
+        <b><a href="{{ article.title }}">{{ article.title }}</a></b><br />
+        <i>{{ article.published }}</i><br />
+        <p>{{ article.summary }}</p>
+    {% endfor %}
+</body>
+</html>
